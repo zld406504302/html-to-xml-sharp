@@ -3,7 +3,7 @@ HTML to XML
 
 Informal conversion of HTML to XML. Useful for screen-scraping with XPath.
 
-Build using Visual Studio 2012. Note that the log4net logging library is installed via NuGet.
+Build using Visual Studio 2012.
 
 Use the static ToXml method of the XmlExtractor class to convert an HTML string to an XML string.
 
