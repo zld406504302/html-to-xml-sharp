@@ -13,15 +13,12 @@ namespace TagParserTest
         {
             try
             {
-                XmlExtractor.ToXml("<html><body>Hello world</body></html>");
+                Log.InfoFormat("XML:\n{0}", XmlExtractor.ToXml("<html><body>Hello world</body></html>"));
             }
             catch (Exception ex)
             {
                 Log.Error("EXCEPTION", ex);
             }
-
-            Console.Out.Write("Press any key");
-            Console.ReadKey();
         }
     }
 }
