@@ -343,7 +343,7 @@ namespace TagParser
                             Tag startTag = t.Tag;
                             if (startTag is EmptyElement)
                             {
-                                result.Append(startTag.ToString());
+                                result.Append(((EmptyElement)startTag).ToString());
                             }
                             else
                             {
@@ -354,7 +354,7 @@ namespace TagParser
                                 Log.DebugFormat("startTagName = {0}", startTagName);
                                 if (EmptyElements.Contains(startTagName))
                                 {
-                                    result.Append(new EmptyElement(startTag));
+                                    result.Append((new EmptyElement(startTag)).ToString());
                                 }
                                 else
                                 {
