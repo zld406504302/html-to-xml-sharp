@@ -118,14 +118,15 @@ namespace TagParser
                 value = value.Replace(">", "&gt;");
             }
 
-            Attribute attrib = Attributes[name];
-            if (attrib == null)
+            Attribute attrib;
+            if (!Attributes.ContainsKey(name))
             {
                 attrib = new Attribute(name, value);
                 Attributes.Add(name, attrib);
             }
             else
             {
+                attrib = Attributes[name];
                 attrib.Value = value;
             }
         }
