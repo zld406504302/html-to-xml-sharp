@@ -468,9 +468,10 @@ namespace TagParser
                     {
                         ScriptToken t = (ScriptToken)token;
                         if (t.Script.Length > 0)
-                        { // Script element contents are often empty.
+                        {
+							// Script element contents are often empty.
                             // NOTE: Removing any prior use of CDATA section in script, to avoid conflict.
-                            string script = t.Script.Replace("<\\!\\[CDATA\\[", "").Replace("\\]\\]>", "");
+                            string script = t.Script.Replace("<![CDATA[", "").Replace("]]>", "");
                             result.Append("/*<![CDATA[*/").Append(script).Append("/*]]>*/");
                         }
                     }
